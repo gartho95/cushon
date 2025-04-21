@@ -78,9 +78,7 @@ func (api *API) depositFunds(writer http.ResponseWriter, request *http.Request) 
 		}
 	}
 	slog.Info("committing transaction to handle deposits")
-	fmt.Println(api.DB)
 	transaction.Commit()
-	fmt.Println(api.DB)
 }
 func (api *API) decodeDepositRequest(writer http.ResponseWriter, request *http.Request) (DepositRequest, error) {
 	var depositRequestBody DepositRequest
